@@ -1,3 +1,3 @@
 # CompetitiveProgramming
 
-<h3>🎈 Repositório para armazenar os códigos relacionados a progração competitiva</h3>
+<h3>🎈 Repositório para armazenar códigos relacionados a progração competitiva</h3>

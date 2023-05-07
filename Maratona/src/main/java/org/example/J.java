@@ -58,6 +58,7 @@ public class J {
     }
 
     static class Directory {
+
         Integer id;
         Integer directoryFiles = 0;
         Directory father;

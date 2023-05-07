@@ -12,9 +12,6 @@ public class J {
 
         Map<Integer, Directory> mapDirectories = new HashMap<Integer, Directory>();
 
-        Directory rootDirectory = new Directory(1);
-        mapDirectories.put(1, rootDirectory);
-
         // create directories
         for (int i = 0; i < dirQuantity; i++) {
             int id = i + 1;
@@ -47,7 +44,7 @@ public class J {
         for (int i = 0; i < testQuantity; i++) {
             Integer directoryId = Integer.valueOf(scanner.next());
             Directory directoryToClean = mapDirectories.get(directoryId);
-            Integer deletedFiles = directoryToClean.clear();
+            Integer deletedFiles = directoryToClean.clean();
 
             tests.add(deletedFiles);
         }
@@ -68,14 +65,14 @@ public class J {
             this.id = id;
         }
 
-        public int clear() {
+        public int clean() {
             int deleted = 0;
 
             deleted += directoryFiles;
             this.directoryFiles = 0;
 
             for (Directory directory : children) {
-                deleted += directory.clear();
+                deleted += directory.clean();
             }
 
             return deleted;
